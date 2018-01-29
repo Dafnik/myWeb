@@ -6,45 +6,75 @@
  * Made By MaterializeCSS.com
  */
 
+/* Icon */
+.tilt {
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+}
+
+.crossRotate {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    outline: 0;
+}
+
+.crossRotate:hover {
+    -webkit-transform: rotate(410deg);
+    -ms-transform: rotate(410deg);
+    transform: rotate(410deg);
+}
+
+/* Link */
 .links {
-  color: orange;
+    color: orange;
 }
 
 .links:hover {
-  border-bottom: 1px dashed;
+    border-bottom: 1px dashed;
 }
 
+/* Parallax */
+.parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+/* Footer */
+footer.page-footer {
+    margin: 0;
+}
 
 p {
-  line-height: 2rem;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-  width: 100%;
-}
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-footer.page-footer {
-  margin: 0;
+    line-height: 2rem;
 }
