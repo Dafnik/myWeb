@@ -17,10 +17,11 @@ $(document).ready(function () {
         scrollOffset : 150
     });
 
-    $('.materialboxed').materialbox();
-
     $('.dropdown-trigger').dropdown();
+
+    $('.tooltipped').tooltip();
 });
+
 
 
 function copyPGPToClipboard() {
