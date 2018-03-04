@@ -1,28 +1,36 @@
 (function($){
   $(function(){
     $('.parallax').parallax();
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
 $(document).ready(function () {
-    $('.modal').modal();
-
-    $('.collapsible').collapsible();
-
-    $('ul.tabs').tabs({
-    });
-
     $('.scrollspy').scrollSpy({
         scrollOffset : 150
     });
-
-    $('.dropdown-trigger').dropdown();
-
-    $('.tooltipped').tooltip();
 });
 
 
+var dropdown = document.querySelector('.dropdown-trigger');
+M.Dropdown.init(dropdown, { });
+
+var tooltipped = document.querySelector('.tooltipped');
+M.Tooltip.init(tooltipped, { });
+
+var modal = document.querySelector('.modal');
+M.Modal.init(modal, { });
+
+var tabs = document.querySelector('ul.tabs');
+M.Tabs.init(tabs, { });
+
+var collabsible = document.querySelector('.collapsible');
+M.Collapsible.init(collabsible, { });
+
+/*var paralax = document.querySelector('.parallax');
+M.Parallax.init(paralax, { });
+
+var scrollspy = document.querySelector('.scrollspy');
+M.ScrollSpy.init(scrollspy, { });*/
 
 function copyPGPToClipboard() {
     window.prompt("Copy to clipboard: Ctrl+C, Enter",
