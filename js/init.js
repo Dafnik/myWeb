@@ -1,36 +1,25 @@
-(function($){
-  $(function(){
-    $('.parallax').parallax();
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-$(document).ready(function () {
-    $('.scrollspy').scrollSpy({
-        scrollOffset : 150
-    });
-});
-
-
-var dropdown = document.querySelector('.dropdown-trigger');
+var dropdown = document.querySelectorAll('.dropdown-trigger');
 M.Dropdown.init(dropdown, { });
 
-var tooltipped = document.querySelector('.tooltipped');
+var tooltipped = document.querySelectorAll('.tooltipped');
 M.Tooltip.init(tooltipped, { });
 
-var modal = document.querySelector('.modal');
+var modal = document.querySelectorAll('.modal');
 M.Modal.init(modal, { });
 
-var tabs = document.querySelector('ul.tabs');
+var tabs = document.querySelectorAll('ul.tabs');
 M.Tabs.init(tabs, { });
 
-var collabsible = document.querySelector('.collapsible');
+var collabsible = document.querySelectorAll('.collapsible');
 M.Collapsible.init(collabsible, { });
 
-/*var paralax = document.querySelector('.parallax');
-M.Parallax.init(paralax, { });
+var scrollSpy = document.querySelectorAll('.scrollspy');
+M.ScrollSpy.init(scrollSpy, {
+    scrollOffset : 150
+});
 
-var scrollspy = document.querySelector('.scrollspy');
-M.ScrollSpy.init(scrollspy, { });*/
+var parallax = document.querySelectorAll('.parallax');
+M.Parallax.init(parallax, { });
 
 function copyPGPToClipboard() {
     window.prompt("Copy to clipboard: Ctrl+C, Enter",
