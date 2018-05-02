@@ -13,26 +13,27 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
+<body id="body">
 <div class="navbar-fixed">
-  <nav class="white" role="navigation">
+  <nav id="nav_head" class="white" role="navigation">
     <div class="nav-wrapper container">
       <div class="brand-logo left">
         <a href="#top" class="tooltipped" data-position="bottom" data-delay="50"
            data-tooltip="You spin my head right round, right round">
-          <img class="tilt crossRotate" src="images/favicon.ico" alt="Unsplashed background img 1" style="height: 60px;"></a>
+          <img class="tilt crossRotate" src="images/favicon.ico" alt="Unsplashed background img 1"
+               style="height: 60px;"></a>
       </div>
       <ul class="right hide-on-small-only">
-        <li><a href="#contact_me" class="deep-orange-text">Contact me</a></li>
-        <li><a href="#projects" class="deep-orange-text">Projects</a></li>
-        <li><a href="#informations" class="deep-orange-text">Informations</a></li>
+        <li><a href="#contact_me" class="colorable_nav_link deep-orange-text">Contact me</a></li>
+        <li><a href="#projects" class="colorable_nav_link deep-orange-text">Projects</a></li>
+        <li><a href="#informations" class="colorable_nav_link deep-orange-text">Informations</a></li>
       </ul>
 
       <div class="right hide-on-med-and-up">
-        <ul id="dropdown" class="dropdown-content ">
-          <li><a href="#contact_me" class="deep-orange-text">Contact me</a></li>
-          <li><a href="#projects" class="deep-orange-text">Projects</a></li>
-          <li><a href="#informations" class="deep-orange-text">Informations</a></li>
+        <ul id="dropdown" class="dropdown-content colorable_dropdown">
+          <li><a href="#contact_me" class="colorable_nav_link deep-orange-text">Contact me</a></li>
+          <li><a href="#projects" class="colorable_nav_link deep-orange-text">Projects</a></li>
+          <li><a href="#informations" class="colorable_nav_link deep-orange-text">Informations</a></li>
         </ul>
 
         <button class="btn dropdown-trigger" data-target="dropdown">Navigate with me</button>
@@ -47,14 +48,14 @@
 </div>
 
 
-<div class="section white">
+<div class="section white colorable_container">
   <div class="row container">
-    <h2 class="header grey-text text-darken-3">Hi, I'm Dominik.</h2>
-    <div class="grey-text text-darken-3 lighten-3" style="float: left; font-size: 20px;">
+    <h2 class="header colorable_maintext grey-text text-darken-3">Hi, I'm Dominik.</h2>
+    <div class="colorable_maintext grey-text text-darken-3 left" style="font-size: 20px;">
       I'm 18 years old and I
     </div>
-    <div class="red-text first-container-heading2" style="float: left; font-size: 20px;">&nbsp❤&nbsp</div>
-    <div class="grey-text text-darken-3 lighten-3" style="float: left; font-size: 20px;">
+    <div class="red-text left" style="font-size: 20px;">&nbsp❤&nbsp</div>
+    <div class="colorable_maintext grey-text text-darken-3 left" style="font-size: 20px;">
       programming!
     </div>
   </div>
@@ -72,7 +73,7 @@
   <div class="parallax"><img src="images/backgrounds/background2.jpg" alt="Unsplashed background img 2"></div>
 </div>
 
-<div class="container">
+<div class="container colorable_container colorable_text">
   <div class="row">
 
     <!-- Telegram -->
@@ -85,7 +86,7 @@
           <span class="card-title">Telegram</span>
         </div>
         <div class="card-action">
-          <a href="https://telegram.me/Dafnik" target="_blank">Contact via telegram</a>
+          <a href="https://telegram.me/Dafnik" target="_blank" class="colorable_link">Contact via telegram</a>
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
           <img class="activator" src="images/email.png" alt="Email">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Email<i class="material-icons right">more_vert</i></span>
+          <span class="card-title activator colorable_text">Email<i class="material-icons right">more_vert</i></span>
         </div>
 
         <div class="card-reveal">
@@ -109,22 +110,21 @@
         </div>
 
         <div class="card-action">
-          <a href="mailto:contact@dafnik.me" class="left" target="_blank">Contact via email</a>
-          <a href="" class="modal-trigger right" data-target="modal1">or encrypted email</a>
+          <a href="mailto:contact@dafnik.me" class="left colorable_link" target="_blank">Contact via email</a>
+          <a href="" class="modal-trigger right colorable_link" data-target="modal_email">or encrypted email</a>
         </div>
-
 
       </div>
     </div>
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
+    <div id="modal_email" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4>My PGP Key:</h4>
+        <h4 class="black-text">My PGP Key:</h4>
         <div class="card-panel teal lighten-2"><strong>Information!</strong> Because I don't use a third party library
           you have to press some extra buttons after the copy button.
         </div>
-        <p>
+        <p class="black-text">
           -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
           Version: Keybase OpenPGP v2.0.64<br>
           Comment: https://keybase.io/crypto<br>
@@ -204,8 +204,8 @@
         </p>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="btn red waves-effect waves-light modal-action modal-close">Close</a>
-        <button onclick="copyPGPToClipboard()" class="btn waves-effect waves-light green">Copy</button>
+        <a href="#!" class="btn-flat waves-effect waves-light modal-action modal-close red">Close</a>
+        <button onclick="copyPGPToClipboard()" class="btn-flat waves-effect waves-light green">Copy</button>
       </div>
     </div>
 
@@ -219,7 +219,7 @@
           <span class="card-title">Twitter</span>
         </div>
         <div class="card-action">
-          <a href="https://twitter.com/LikeDafnik" target="_blank">Follow me on twitter</a>
+          <a href="https://twitter.com/LikeDafnik" target="_blank" class="colorable_link">Follow me on twitter</a>
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@
           <span class="card-title">GitHub</span>
         </div>
         <div class="card-action">
-          <a href="https://github.com/Dafnik" target="_blank">Look into my GitHub projects</a>
+          <a href="https://github.com/Dafnik" target="_blank" class="colorable_link">Look into my GitHub projects</a>
         </div>
       </div>
     </div>
@@ -252,7 +252,7 @@
           <span class="card-title">GitLab</span>
         </div>
         <div class="card-action">
-          <a href="https://gitlab.com/Dafnik" target="_blank"> Look into my GitLab projects</a>
+          <a href="https://gitlab.com/Dafnik" target="_blank" class="colorable_link"> Look into my GitLab projects</a>
         </div>
       </div>
     </div>
@@ -267,7 +267,7 @@
           <span class="card-title">Keybase</span>
         </div>
         <div class="card-action">
-          <a href="https://keybase.io/dafnik" target="_blank">Look on my Keybase profile</a>
+          <a href="https://keybase.io/dafnik" target="_blank" class="colorable_link">Look on my Keybase profile</a>
         </div>
       </div>
     </div>
@@ -282,7 +282,8 @@
           <span class="card-title">Reddit</span>
         </div>
         <div class="card-action">
-          <a href="https://reddit.com/u/Dafnik" target="_blank">Take a look at my reddit profile</a>
+          <a href="https://reddit.com/u/Dafnik" target="_blank" class="colorable_link">Take a look at my reddit
+            profile</a>
         </div>
       </div>
     </div>
@@ -300,15 +301,15 @@
   <div class="parallax"><img src="images/backgrounds/background3.jpg" alt="Unsplashed background img 2"></div>
 </div>
 
-<div class="container">
+<div class="container colorable_container">
 
   <div class="row">
     <div class="col s12">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab col s3"><a href="#snapchatwall" class="active">SnapchatWall</a></li>
-        <li class="tab col s3"><a href="#ticketsys">Ticketsys</a></li>
-        <li class="tab col s3"><a href="#bsh">BSH Viewer</a></li>
-        <li class="tab col s3"><a href="#myweb">myWeb</a></li>
+      <ul class="tabs tabs-fixed-width ">
+        <li class="tab col s3"><a href="#snapchatwall" class="active colorable_link">SnapchatWall</a></li>
+        <li class="tab col s3"><a href="#ticketsys" class="colorable_link">Ticketsys</a></li>
+        <li class="tab col s3"><a href="#bsh" class="colorable_link">BSH Viewer</a></li>
+        <li class="tab col s3"><a href="#myweb" class="colorable_link">myWeb</a></li>
       </ul>
     </div>
     <div id="snapchatwall" class="col s12">
@@ -320,51 +321,67 @@
               <span class="card-title">SnapchatWall</span>
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/SnapchatWall" target="_blank">Take a look</a>
+              <a href="https://github.com/Dafnik/SnapchatWall" target="_blank" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
         <div class="col s12 m8 l8">
-          <ul class="collapsible popout" data-collapsible="expandable">
+          <ul class="collapsible popout colorable_collection" data-collapsible="expandable">
             <li class="active">
-              <div class="collapsible-header active"><i class="material-icons">description</i>Description</div>
-              <div class="collapsible-body"><span>
+              <div class="collapsible-header colorable_collection_header active colorable_text">
+                <i class="material-icons">description</i>Description
+              </div>
+              <div class="collapsible-body"><span class="colorable_text">
                 SnapchatWall is a collection of independent programs that collectively create a system that stores snaps,
                 checks them and then displays the images on a screen or canvas.
               </span></div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">info</i>Technical infos</div>
+              <div class="collapsible-header colorable_collection_header colorable_text">
+                <i class="material-icons">info</i>Technical infos
+              </div>
               <div class="collapsible-body">
-                <ul class="collection">
-                  <li class="collection-item">All three components are written in C#</li>
-                  <li class="collection-item">Rider for programming everything</li>
-                  <li class="collection-item">Visual Studio for compliling the project on my destination computer</li>
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">All three components are written in C#</li>
+                  <li class="collection-item colorable_collection_header">Rider was used to create the bot. The UI
+                    components were created in Visual Studio.
+                  </li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">developer_mode</i>Software needed</div>
+              <div class="collapsible-header colorable_collection_header colorable_text">
+                <i class="material-icons">developer_mode</i>Software needed
+              </div>
               <div class="collapsible-body">
-                <ul class="collection">
-                  <li class="collection-item">Android Emulator (I have used Nox Player)</li>
-                  <li class="collection-item">Windows 10 (Sorry, I had to use Windows because it provides the simplest
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">An Android Emulator (I'm using Nox Player)
+                  </li>
+                  <li class="collection-item colorable_collection_header">Windows 10 (Sorry, I had to use Windows
+                    because it provides the simplest
                     method for making screenshots and controlling the mouse)
                   </li>
-                  <li class="collection-item">SnapchatBot - Open and saves snaps</li>
-                  <li class="collection-item">ContentFilter - Filters saved snaps and moves them to other directories
+                  <li class="collection-item colorable_collection_header">SnapchatBot - Open and saves snaps</li>
+                  <li class="collection-item colorable_collection_header">ContentFilter - Filters saved snaps and moves
+                    them to other directories
                   </li>
-                  <li class="collection-item">SnapDisplay - Shows snaps in an endless cycle</li>
+                  <li class="collection-item colorable_collection_header">SnapDisplay - Shows snaps in an endless
+                    cycle
+                  </li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">computer</i>Hardware needed</div>
+              <div class="collapsible-header colorable_collection_header colorable_text">
+                <i class="material-icons">computer</i>Hardware needed
+              </div>
               <div class="collapsible-body">
-                <ul class="collection">
-                  <li class="collection-item">Minimal requirement are two computers (better three) running Windows 10
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">Minimal requirement are two computers (better
+                    three) running Windows 10
                   </li>
-                  <li class="collection-item">You should have a shared folder (or a NAS) in your network, so all
+                  <li class="collection-item colorable_collection_header">You should have a shared folder (or a NAS) in
+                    your network, so all
                     computers are connected between each other
                   </li>
                 </ul>
@@ -382,39 +399,46 @@
               <img src="images/projects/ticketsys.jpg" alt="Ticketsys image">
             </div>
             <div class="card-content">
-              <span class="card-title">Ticketsys</span>
+              <span class="card-title colorable_text">Ticketsys</span>
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/ticketsys-bootstrap" target="_blank">Take a look</a>
+              <a href="https://github.com/Dafnik/ticketsys-bootstrap" target="_blank" class="colorable_link">Take a
+                look</a>
             </div>
           </div>
         </div>
         <div class="col s12 m8 l8">
           <ul class="collapsible popout" data-collapsible="expandable">
             <li class="active">
-              <div class="collapsible-header active"><i class="material-icons">description</i>Description</div>
-              <div class="collapsible-body"><span>
-                Ticketsys with Bootstrap
-              </span></div>
+              <div class="collapsible-header colorable_collection_header colorable_text active"><i
+                  class="material-icons">description</i>Description
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                Ticketsys with Bootstrap. Ticketsys is a website to manage the Ticket reservation and allocation.
+                </span>
+              </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">developer_mode</i>Software needed</div>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i class="material-icons">developer_mode</i>Software
+                needed
+              </div>
               <div class="collapsible-body">
-                <ul class="collection">
-                  <li class="collection-item">Webserver (Apache, nginx, etc.)</li>
-                  <li class="collection-item">MySQL or MariaDB</li>
-                  <li class="collection-item">PHP</li>
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">A Webserver (Apache, nginx, etc.)</li>
+                  <li class="collection-item colorable_collection_header">MySQL or MariaDB</li>
+                  <li class="collection-item colorable_collection_header">PHP >=7.0</li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">computer</i>Hardware needed</div>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i class="material-icons">computer</i>Hardware
+                needed
+              </div>
               <div class="collapsible-body">
-                <ul class="collection">
-                  <li class="collection-item">You just need a server which is powerful enough to run the software
-                    mentioned earlier.
-                  </li>
-                </ul>
+                <span class="colorable_collection_header colorable_text">
+                  You just need a server which is powerful enough to run the softwarementioned earlier.
+                </span>
               </div>
             </li>
           </ul>
@@ -429,19 +453,22 @@
               <img src="images/projects/bsh.gif" alt="BSH image">
             </div>
             <div class="card-action">
-              <a href="https://bsh.e9a.at" target="_blank">Take a look at the project</a>
+              <a href="https://bsh.e9a.at" target="_blank" class="colorable_link">Take a look at the project</a>
             </div>
             <div class="card-action">
-              <a href="https://gitlab.com/e9a/e9a-bsh-webpage" target="_blank">Take a look at the source code</a>
+              <a href="https://gitlab.com/e9a/e9a-bsh-webpage" target="_blank" class="colorable_link">Take a look at the
+                source code</a>
             </div>
           </div>
         </div>
         <div class="col s12 m8 l8">
-          <ul class="collapsible popout" data-collapsible="expandable">
+          <ul class="collapsible popout colorable_collection_header colorable_text" data-collapsible="expandable">
             <li class="active">
-              <div class="collapsible-header active"><i class="material-icons">description</i>Description</div>
+              <div class="collapsible-header active colorable_collection_header colorable_text">
+                <i class="material-icons">description</i>Description
+              </div>
               <div class="collapsible-body">
-                <span>
+                <span class="colorable_collection_header colorable_text">
                   The current problem is, that if you want to know the food plan you have to download the PDF. This is
                   annoying on PC and on mobile phones. This is the solution for the problem. On desktop devices you can use
                   the built in PDF reader from your browser and on mobile devices you can use from google a online
@@ -450,12 +477,24 @@
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">info</i>Software needed</div>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i
+                  class="material-icons">info</i>Software needed
+              </div>
               <div class="collapsible-body">
                 <ul class="collection">
-                  <li class="collection-item">Webserver (Apache, nginx, etc.)</li>
-                  <li class="collection-item">PHP</li>
+                  <li class="collection-item colorable_collection_header">Webserver (Apache, nginx, etc.)</li>
+                  <li class="collection-item colorable_collection_header">PHP</li>
                 </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i class="material-icons">computer</i>Hardware
+                needed
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                  You just need a server which is powerful enough to run the softwarementioned earlier.
+                </span>
               </div>
             </li>
           </ul>
@@ -470,27 +509,31 @@
               <img src="images/icon.png" alt="myWeb image">
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/myWeb" target="_blank">Take a look</a>
+              <a href="https://github.com/Dafnik/myWeb" target="_blank" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
         <div class="col s12 m8 l8">
           <ul class="collapsible popout" data-collapsible="expandable">
             <li class="active">
-              <div class="collapsible-header active"><i class="material-icons">description</i>Description</div>
+              <div class="collapsible-header active colorable_collection_header colorable_text"><i
+                  class="material-icons">description</i>Description
+              </div>
               <div class="collapsible-body">
-                <span>
+                <span class="colorable_collection_header colorable_text">
                   myWeb is a project that should provide an easy way to contact me and show my projects publicly.
                 </span>
               </div>
             </li>
             <li>
-              <div class="collapsible-header"><i class="material-icons">info</i>Technical infos</div>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i
+                  class="material-icons">info</i>Technical infos
+              </div>
               <div class="collapsible-body">
-                <span>
+                <span class="colorable_collection_header colorable_text">
                   Everything you see here is written in HTML, CSS and Javascript (and later perhaps also in
                   PHP). Thanks to <a class="links" href="http://materializecss.com">Materialize</a> for there
-                  beautiful Material Design library.
+                  awesome Material Design library.
                 </span>
               </div>
             </li>
@@ -517,41 +560,46 @@
 
     <div class="row">
       <div class="col l6 s12">
-        <h5><a href="index.html" class="links">dafnik.me</a></h5>
+        <h5><a href="index.html" class="links orange-text colorable_link">dafnik.me</a></h5>
         <p class="grey-text text-lighten-4">
           Hi, my name is Dominik Dafert, I live in Austria (exactly in Lower Austria) and I am 18 years
           old. <br>
           Currently I attend the secondary college for information technology. We are learning C#, PHP and
           Javascript in our school and in
           addition I learnt Java myself. <br>
-          If you want to see what I have been working on, you can check my <a class="links"
+          If you want to see what I have been working on, you can check my <a class="links orange-text colorable_link"
                                                                               href="https://github.com/Dafnik/"
                                                                               target="_blank">GitHub</a>
-          and <a class="links" href="https://gitlab.com/Dafnik/" target="_blank">GitLab</a> profile! <br>
+          and <a class="links orange-text colorable_link" href="https://gitlab.com/Dafnik/" target="_blank">GitLab</a>
+          profile! <br>
           <br>
           If you want to support me and my projects, you can send me money with Bitcoin
           [156gYskvxC3jwknERH9QpPV6y6osbvtgj9], Etherum [0xa5b84c7cf052b3cb6745a423914fcacffb85525b] or
-          <a class="links" href="https://paypal.me/Dafnik" target="_blank">PayPal</a>.
+          <a class="links orange-text colorable_link" href="https://paypal.me/Dafnik" target="_blank">PayPal</a>.
         </p>
 
       </div>
       <div class="col l6 s12">
         <h5 class="white-text">Help</h5>
         <p class="grey-text text-lighten-4">
-          I made this website with Javascript, HTML5, CSS3 and <a class="links"
+          I made this website with Javascript, HTML5, CSS3 and <a class="links orange-text colorable_link"
                                                                   href="http://materializecss.com/"
                                                                   target="_blank">Materialize</a>. <br>
           Moreover our server is located in Frankfurt (Germany), it's running
-          <a class="links" href="https://www.debian.org/" target="_blank">Debian</a> 9,
-          <a class="links" href="https://nginx.org/en/" target="_blank">nginx</a> and the certificate was
-          signed by <a class="links" href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>!
+          <a class="links orange-text colorable_link" href="https://www.debian.org/" target="_blank">Debian</a> 9,
+          <a class="links orange-text colorable_link" href="https://nginx.org/en/" target="_blank">nginx</a> and the
+          certificate was
+          signed by <a class="links orange-text colorable_link" href="https://letsencrypt.org/" target="_blank">Let's
+          Encrypt</a>!
           <br>
           P.S.: If you don't trust me (what I totally understand), take a look into the
-          <a class="links" href="https://github.com/Dafnik/myWeb" target="_blank">source code</a>!<br><br>
+          <a class="links orange-text colorable_link" href="https://github.com/Dafnik/myWeb" target="_blank">source
+            code</a>!<br><br>
           Furthermore, I have to praise
-          <a class="links" href="https://e9a.at" target="_blank">Bernhard Steindl</a>
+          <a class="links orange-text colorable_link" href="https://e9a.at" target="_blank">Bernhard Steindl</a>
           for the awesome server support and
-          <a class="links" href="https://twitter.com/apflchen" target="_blank">Michael Apfelthaler</a>
+          <a class="links orange-text colorable_link" href="https://twitter.com/apflchen" target="_blank">Michael
+            Apfelthaler</a>
           for the sick favicon. Checkout their profiles.
         </p>
       </div>
@@ -560,14 +608,70 @@
   <div class="footer-copyright">
     <div class="container">
       Made by Dominik Dafert with <a class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>
-      2017-<noscript>2018</noscript><script type="text/javascript">document.write(new Date().getFullYear() + "");</script>
+      2017-
+      <noscript>2018</noscript>
+      <script type="text/javascript">document.write(new Date().getFullYear() + "");</script>
+
+      <a class="links orange-text colorable_link right modal-trigger" href="#about_modal">About</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="about_modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h3 class="black-text">About</h3>
+
+      <ul class="collection with-header hoverable">
+        <li class="collection-header black-text"><h5>Contributors</h5></li>
+        <li class="collection-item black-text">Developer: Dominik Dafert</li>
+      </ul>
+
+      <ul class="collection with-header hoverable">
+        <li class="collection-header black-text"><h5>Libraries</h5></li>
+        <li class="collection-item black-text"><a href="https://materializecss.com"
+                                                  class="links orange-text colorable_link" target="_blank">MaterializeCSS</a>
+        </li>
+      </ul>
+
+      <ul class="collection with-header hoverable">
+        <li class="collection-header black-text"><h5>Licence: GNU General Public License v3.0</h5></li>
+        <li class="collection-item black-text">Source Code: <a href="https://github.com/Dafnik/myWeb"
+                                                               class="links orange-text colorable_link"
+                                                               target="_blank">GitHub</a></li>
+        <li class="collection-item black-text">Version: 1.0-17.04.2018</li>
+      </ul>
+
+      <ul class="collection with-header hoverable">
+        <li class="collection-header black-text"><h5>Impressum</h5></li>
+        <li class="collection-item black-text">Dominik Dafert</li>
+        <li class="collection-item black-text">Wohnort: Kasernstrasse 6-8, 3500 Krems</li>
+        <li class="collection-item black-text">Email: contact@dafnik.me</li>
+        <li class="collection-item black-text">
+          Ich übernehme keine Haftung oder Garantie für die Aktualität, Vollständigkeit und Richtigkeit der auf allen
+          Seiten von https://dafnik.me zur Verfügung gestellten Daten, Abbildungen und Informationen. <br>Mein Angebot
+          enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss haben. Deshalb übernehme
+          ich keine Haftung und Verantwortung für die Inhalte der verlinkten Seiten.
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close red waves-effect waves-light btn-flat">Close</a>
     </div>
   </div>
 </footer>
 
+
+<div class="fixed-action-btn toolbar">
+  <button class="btn-floating btn-large orange waves-effect waves-light" onclick="changeTheme()" id="actionButton">
+    <i class="large material-icons" id="actionButtonIcon">brightness_2</i>
+  </button>
+</div>
+
+
 <!--  Scripts-->
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/theming.js"></script>
 
 </body>
 </html>

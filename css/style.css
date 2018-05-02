@@ -1,11 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 /* Icon */
 .tilt {
     -moz-transform: rotate(50deg);
@@ -33,9 +25,6 @@
 }
 
 /* Link */
-.links {
-    color: orange;
-}
 
 .links:hover {
     border-bottom: 1px dashed;
@@ -77,4 +66,8 @@ footer.page-footer {
 
 p {
     line-height: 2rem;
+}
+
+.border-black {
+    border-color: #090909;
 }
