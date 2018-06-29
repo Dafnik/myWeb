@@ -1,6 +1,6 @@
 function setCookie(cname,cvalue,exdays) {
   let d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  d.setTime(d.getTime() + (exdays*365*24*60*60*1000));
   //toGTMString exists
   let expires = "expires=" + d.toGMTString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
