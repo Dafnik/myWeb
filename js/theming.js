@@ -1,8 +1,16 @@
-let cookieStr = document.cookie;
-let isDark = cookieStr.indexOf("theme=dark") !== -1;
+if(getCookie("theme") !== "") {
+  let theme = getCookie("theme");
 
-if (isDark) {
-  changeTheme();
+  if(theme === "dark") {
+    changeTheme();
+  }
+
+} else {
+  let currentdate = new Date();
+
+  if(currentdate.getHours() > 18 || currentdate.getHours() < 9) {
+    changeTheme();
+  }
 }
 
 function changeTheme() {
@@ -16,7 +24,7 @@ function changeTheme() {
 
   //Change from white to black
   if (nav_head.classList.contains("white")) {
-    document.cookie = "theme=dark";
+    setCookie("theme", "dark", 10);
 
     actionButtonIcon.innerText = "brightness_high";
     actionButton.classList.remove("orange");
@@ -101,8 +109,10 @@ function changeTheme() {
       text[i].classList.add("white-text");
     }
 
+    M.toast({html: 'Changed to dark mode!', classes: 'rounded', displayLength: 1500});
+
   } else {
-    document.cookie = "theme=light";
+    setCookie("theme", "light", 10);
 
     actionButtonIcon.innerText = "brightness_2";
     actionButton.classList.add("orange");
@@ -187,5 +197,6 @@ function changeTheme() {
       text[i].classList.remove("white-text");
     }
 
+    M.toast({html: 'Changed to light mode!', classes: 'rounded', displayLength: 1500});
   }
 }

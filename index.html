@@ -26,14 +26,14 @@
       <ul class="right hide-on-small-only">
         <li><a href="#contact_me" class="colorable_nav_link deep-orange-text">Contact me</a></li>
         <li><a href="#projects" class="colorable_nav_link deep-orange-text">Projects</a></li>
-        <li><a href="#informations" class="colorable_nav_link deep-orange-text">Informations</a></li>
+        <li><a href="#information" class="colorable_nav_link deep-orange-text">Information</a></li>
       </ul>
 
       <div class="right hide-on-med-and-up">
         <ul id="dropdown" class="dropdown-content colorable_dropdown">
           <li><a href="#contact_me" class="colorable_nav_link deep-orange-text">Contact me</a></li>
           <li><a href="#projects" class="colorable_nav_link deep-orange-text">Projects</a></li>
-          <li><a href="#informations" class="colorable_nav_link deep-orange-text">Informations</a></li>
+          <li><a href="#information" class="colorable_nav_link deep-orange-text">Information</a></li>
         </ul>
 
         <button class="btn dropdown-trigger" data-target="dropdown">Navigate with me</button>
@@ -103,7 +103,7 @@
 
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Email <i class="material-icons right">close</i></span>
-          <p>
+          <p style="color: black">
             Emails are old and outdated. But still an much used platform. You can contact me unencrypted or
             encrypted with my PGP key.
           </p>
@@ -304,16 +304,16 @@
 <div class="container colorable_container">
 
   <div class="row">
-    <div class="col s12">
-      <ul class="tabs tabs-fixed-width ">
-        <li class="tab col s3"><a href="#snapchatwall" class="active colorable_link">SnapchatWall</a></li>
-        <li class="tab col s3"><a href="#ticketsys" class="colorable_link">Ticketsys</a></li>
-        <li class="tab col s3"><a href="#bsh" class="colorable_link">BSH Viewer</a></li>
-        <li class="tab col s3"><a href="#myweb" class="colorable_link">myWeb</a></li>
-      </ul>
-    </div>
+    <ul class="tabs tabs-fixed-width ">
+      <li class="tab col s3"><a href="#snapchatwall" class="active colorable_link">SnapchatWall</a></li>
+      <li class="tab col s3"><a href="#sharingiscaring" class="active colorable_link">Sharing Is Carying</a></li>
+      <li class="tab col s3"><a href="#datepoll" class="active colorable_link">DatePoll</a></li>
+      <li class="tab col s3"><a href="#ticketsys" class="colorable_link">Ticketsys</a></li>
+      <li class="tab col s3"><a href="#bsh" class="colorable_link">BSH Viewer</a></li>
+      <li class="tab col s3"><a href="#myweb" class="colorable_link">myWeb</a></li>
+    </ul>
     <div id="snapchatwall" class="col s12">
-      <div class="row">
+      <div class="row" id="tabby">
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
@@ -391,6 +391,99 @@
         </div>
       </div>
     </div>
+    <div id="sharingiscaring" class="col s12">
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/projects/sic.png" alt="myWeb image">
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/Dafnik/SharingIsCaring" target="_blank" class="colorable_link">Take a look</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m8 l8">
+          <ul class="collapsible popout" data-collapsible="expandable">
+            <li class="active">
+              <div class="collapsible-header active colorable_collection_header colorable_text"><i
+                  class="material-icons">description</i>Description
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                  A little materialized HTTP web server indexer
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i
+                  class="material-icons">info</i>Technical information
+              </div>
+              <div class="collapsible-body colorable_text">
+                Written in
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">PHP</li>
+                  <li class="collection-item colorable_collection_header">Materialize</li>
+                  <li class="collection-item colorable_collection_header">jQuery</li>
+                  <li class="collection-item colorable_collection_header">HTML</li>
+                  <li class="collection-item colorable_collection_header">Javascript</li>
+                  <li class="collection-item colorable_collection_header">CSS3</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i
+                  class="material-icons">info</i>Software needed
+              </div>
+              <div class="collapsible-body">
+                <ul class="collection colorable_text">
+                  <li class="collection-item colorable_collection_header">A Webserver (Apache, nginx, etc.)</li>
+                  <li class="collection-item colorable_collection_header">PHP >=7.0</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i class="material-icons">computer</i>Hardware
+                needed
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                  You only need a server for this web application.
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="datepoll" class="col s12">
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/icon.png" alt="DatePoll">
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/fschaupp/DatePoll" target="_blank" class="colorable_link">Take a look</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m8 l8">
+          <ul class="collapsible popout" data-collapsible="expandable">
+            <li class="active">
+              <div class="collapsible-header active colorable_collection_header colorable_text"><i
+                  class="material-icons">description</i>Description
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                  DatePoll is a management tools for huge teams.
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="ticketsys" class="col s12">
       <div class="row">
         <div class="col s12 m4 l4">
@@ -437,7 +530,7 @@
               </div>
               <div class="collapsible-body">
                 <span class="colorable_collection_header colorable_text">
-                  You just need a server which is powerful enough to run the softwarementioned earlier.
+                  You only need a server for this web application.
                 </span>
               </div>
             </li>
@@ -493,7 +586,7 @@
               </div>
               <div class="collapsible-body">
                 <span class="colorable_collection_header colorable_text">
-                  You just need a server which is powerful enough to run the softwarementioned earlier.
+                  You only need a server for this web application.
                 </span>
               </div>
             </li>
@@ -521,19 +614,28 @@
               </div>
               <div class="collapsible-body">
                 <span class="colorable_collection_header colorable_text">
-                  myWeb is a project that should provide an easy way to contact me and show my projects publicly.
+                  myWeb is this website. It's a collection of applications which I wrote and list services to contact me.
                 </span>
               </div>
             </li>
             <li>
               <div class="collapsible-header colorable_collection_header colorable_text"><i
-                  class="material-icons">info</i>Technical infos
+                  class="material-icons">info</i>Technical information
               </div>
               <div class="collapsible-body">
                 <span class="colorable_collection_header colorable_text">
                   Everything you see here is written in HTML, CSS and Javascript (and later perhaps also in
-                  PHP). Thanks to <a class="links" href="http://materializecss.com">Materialize</a> for there
-                  awesome Material Design library.
+                  PHP). I have used the Material Design Library <a class="links" href="http://materializecss.com">Materialize</a>.
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header colorable_collection_header colorable_text"><i
+                  class="material-icons">developer_mode</i>Hardware information
+              </div>
+              <div class="collapsible-body">
+                <span class="colorable_collection_header colorable_text">
+                  You only need a server for this website.
                 </span>
               </div>
             </li>
@@ -545,10 +647,10 @@
 </div>
 
 <div class="parallax-container valign-wrapper">
-  <div id="informations" class="section scrollspy no-pad-bot">
+  <div id="information" class="section scrollspy no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h2 class="header col s12 light">Informations</h2>
+        <h2 class="header col s12 light">Information</h2>
       </div>
     </div>
   </div>
@@ -634,7 +736,7 @@
       </ul>
 
       <ul class="collection with-header hoverable">
-        <li class="collection-header black-text"><h5>Licence: GNU General Public License v3.0</h5></li>
+        <li class="collection-header black-text"><h5>Licence: GNU Affero General Public License v3.0</h5></li>
         <li class="collection-item black-text">Source Code: <a href="https://github.com/Dafnik/myWeb"
                                                                class="links orange-text colorable_link"
                                                                target="_blank">GitHub</a></li>
@@ -649,7 +751,7 @@
         <li class="collection-item black-text">
           Ich übernehme keine Haftung oder Garantie für die Aktualität, Vollständigkeit und Richtigkeit der auf allen
           Seiten von https://dafnik.me zur Verfügung gestellten Daten, Abbildungen und Informationen. <br>Mein Angebot
-          enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss haben. Deshalb übernehme
+          enthält Links zu externen Websiten Dritter, auf deren Inhalte ich keinen Einfluss haben. Deshalb übernehme
           ich keine Haftung und Verantwortung für die Inhalte der verlinkten Seiten.
         </li>
       </ul>
@@ -661,7 +763,8 @@
 </footer>
 
 
-<div class="fixed-action-btn toolbar">
+<div class="fixed-action-btn toolbar tooltipped" data-position="left" data-delay="50"
+     data-tooltip="Change theme">
   <button class="btn-floating btn-large orange waves-effect waves-light" onclick="changeTheme()" id="actionButton">
     <i class="large material-icons" id="actionButtonIcon">brightness_2</i>
   </button>
@@ -671,6 +774,7 @@
 <!--  Scripts-->
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/cookieHandler.js"></script>
 <script type="text/javascript" src="js/theming.js"></script>
 
 </body>
