@@ -1,3 +1,8 @@
+(function () {
+  // Initialize
+  let bLazy = new Blazy();
+})();
+
 var dropdown = document.querySelectorAll('.dropdown-trigger');
 M.Dropdown.init(dropdown, {});
 
