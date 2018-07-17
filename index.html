@@ -10,7 +10,7 @@
 
   <!-- CSS  -->
   <link href="fonts/materialicon.css" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body id="body">
@@ -44,7 +44,7 @@
 
 <div id="index-banner" class="parallax-container" style="min-height: 500px">
   <div id="top" class="section scrollspy"></div>
-  <div class="parallax"><img src="images/backgrounds/background1.jpg" alt="Unsplashed background img 1"></div>
+  <div class="parallax"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="images/backgrounds/background1.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
 
@@ -70,7 +70,10 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="images/backgrounds/background2.jpg" alt="Unsplashed background img 2"></div>
+  <div class="parallax">
+    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+         data-src="images/backgrounds/background2.jpg" alt="Unsplashed background img 2">
+  </div>
 </div>
 
 <div class="container colorable_container colorable_text">
@@ -80,13 +83,14 @@
     <div class="col s12 m4 l4">
       <div class="card hoverable medium">
         <div class="card-image">
-          <img src="images/telegram.jpg" alt="Telegram logo on a smartphone">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/telegram.jpg" alt="Telegram logo on a smartphone">
         </div>
         <div class="card-content">
           <span class="card-title">Telegram</span>
         </div>
         <div class="card-action">
-          <a href="https://telegram.me/Dafnik" target="_blank" class="colorable_link">Contact via telegram</a>
+          <a href="https://telegram.me/Dafnik" target="noopener" class="colorable_link">Contact via telegram</a>
         </div>
       </div>
     </div>
@@ -110,7 +114,7 @@
         </div>
 
         <div class="card-action">
-          <a href="mailto:contact@dafnik.me" class="left colorable_link" target="_blank">Contact via email</a>
+          <a href="mailto:contact@dafnik.me" class="left colorable_link">Contact via email</a>
           <a href="" class="modal-trigger right colorable_link" data-target="modal_email">or encrypted email</a>
         </div>
 
@@ -213,13 +217,14 @@
     <div class="col s12 m4 l4">
       <div class="card medium hoverable">
         <div class="card-image">
-          <img src="images/twitter.jpg" alt="Twitter logo">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/twitter.jpg" alt="Twitter logo">
         </div>
         <div class="card-content">
           <span class="card-title">Twitter</span>
         </div>
         <div class="card-action">
-          <a href="https://twitter.com/LikeDafnik" target="_blank" class="colorable_link">Follow me on twitter</a>
+          <a href="https://twitter.com/dafnik_" target="noopener" class="colorable_link">Follow me on twitter</a>
         </div>
       </div>
     </div>
@@ -231,13 +236,14 @@
     <div class="col s12 m6 l3">
       <div class="card medium hoverable">
         <div class="card-image">
-          <img src="images/github.png" alt="Github">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/github.png" alt="Github">
         </div>
         <div class="card-content">
           <span class="card-title">GitHub</span>
         </div>
         <div class="card-action">
-          <a href="https://github.com/Dafnik" target="_blank" class="colorable_link">Look into my GitHub projects</a>
+          <a href="https://github.com/Dafnik" target="noopener" class="colorable_link">Look into my GitHub projects</a>
         </div>
       </div>
     </div>
@@ -246,13 +252,14 @@
     <div class="col s12 m6 l3">
       <div class="card medium hoverable">
         <div class="card-image">
-          <img src="images/gitlab.png" alt="GitLab logo">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/gitlab.png" alt="GitLab logo">
         </div>
         <div class="card-content">
           <span class="card-title">GitLab</span>
         </div>
         <div class="card-action">
-          <a href="https://gitlab.com/Dafnik" target="_blank" class="colorable_link"> Look into my GitLab projects</a>
+          <a href="https://gitlab.com/Dafnik" target="noopener" class="colorable_link"> Look into my GitLab projects</a>
         </div>
       </div>
     </div>
@@ -261,13 +268,14 @@
     <div class="col s12 m6 l3">
       <div class="card medium hoverable">
         <div class="card-image">
-          <img src="images/keybase.jpg" alt="Picture for Keybase">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/keybase.jpg" alt="Picture for Keybase">
         </div>
         <div class="card-content">
           <span class="card-title">Keybase</span>
         </div>
         <div class="card-action">
-          <a href="https://keybase.io/dafnik" target="_blank" class="colorable_link">Look on my Keybase profile</a>
+          <a href="https://keybase.io/dafnik" target="noopener" class="colorable_link">Look on my Keybase profile</a>
         </div>
       </div>
     </div>
@@ -276,13 +284,14 @@
     <div class="col s12 m6 l3">
       <div class="card medium hoverable">
         <div class="card-image">
-          <img src="images/reddit.png" alt="Reddit">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="images/reddit.png" alt="Reddit">
         </div>
         <div class="card-content">
           <span class="card-title">Reddit</span>
         </div>
         <div class="card-action">
-          <a href="https://reddit.com/u/Dafnik" target="_blank" class="colorable_link">Take a look at my reddit
+          <a href="https://reddit.com/u/Dafnik" target="noopener" class="colorable_link">Take a look at my reddit
             profile</a>
         </div>
       </div>
@@ -298,7 +307,10 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="images/backgrounds/background3.jpg" alt="Unsplashed background img 2"></div>
+  <div class="parallax">
+    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+         data-src="images/backgrounds/background3.jpg" alt="Unsplashed background img 2">
+  </div>
 </div>
 
 <div class="container colorable_container">
@@ -317,11 +329,12 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/projects/snapchatwall.png" alt="SnapchatWall image">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/projects/snapchatwall.png" alt="SnapchatWall image">
               <span class="card-title">SnapchatWall</span>
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/SnapchatWall" target="_blank" class="colorable_link">Take a look</a>
+              <a href="https://github.com/Dafnik/SnapchatWall" target="noopener" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
@@ -396,10 +409,11 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/projects/sic.png" alt="myWeb image">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/projects/sic.png" alt="myWeb image">
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/SharingIsCaring" target="_blank" class="colorable_link">Take a look</a>
+              <a href="https://github.com/Dafnik/SharingIsCaring" target="noopener" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
@@ -461,10 +475,11 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/icon.png" alt="DatePoll">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/icon.png" alt="DatePoll">
             </div>
             <div class="card-action">
-              <a href="https://github.com/fschaupp/DatePoll" target="_blank" class="colorable_link">Take a look</a>
+              <a href="https://github.com/fschaupp/DatePoll" target="noopener" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
@@ -489,13 +504,14 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/projects/ticketsys.jpg" alt="Ticketsys image">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/projects/ticketsys.jpg" alt="Ticketsys image">
             </div>
             <div class="card-content">
               <span class="card-title colorable_text">Ticketsys</span>
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/ticketsys-bootstrap" target="_blank" class="colorable_link">Take a
+              <a href="https://github.com/Dafnik/ticketsys-bootstrap" target="noopener" class="colorable_link">Take a
                 look</a>
             </div>
           </div>
@@ -543,13 +559,14 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image" style="padding: 10px;">
-              <img src="images/projects/bsh.gif" alt="BSH image">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/projects/bsh.gif" alt="BSH image">
             </div>
             <div class="card-action">
-              <a href="https://bsh.e9a.at" target="_blank" class="colorable_link">Take a look at the project</a>
+              <a href="https://bsh.e9a.at" target="noopener" class="colorable_link">Take a look at the project</a>
             </div>
             <div class="card-action">
-              <a href="https://gitlab.com/e9a/e9a-bsh-webpage" target="_blank" class="colorable_link">Take a look at the
+              <a href="https://gitlab.com/e9a/e9a-bsh-webpage" target="noopener" class="colorable_link">Take a look at the
                 source code</a>
             </div>
           </div>
@@ -599,10 +616,11 @@
         <div class="col s12 m4 l4">
           <div class="card">
             <div class="card-image">
-              <img src="images/icon.png" alt="myWeb image">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="images/icon.png" alt="myWeb image">
             </div>
             <div class="card-action">
-              <a href="https://github.com/Dafnik/myWeb" target="_blank" class="colorable_link">Take a look</a>
+              <a href="https://github.com/Dafnik/myWeb" target="noopener" class="colorable_link">Take a look</a>
             </div>
           </div>
         </div>
@@ -654,7 +672,10 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="images/backgrounds/background4.jpg" alt="Unsplashed background img 3"></div>
+  <div class="parallax">
+    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+         data-src="images/backgrounds/background4.jpg" alt="Unsplashed background img 3">
+  </div>
 </div>
 
 <footer class="page-footer teal">
@@ -671,13 +692,13 @@
           addition I learnt Java myself. <br>
           If you want to see what I have been working on, you can check my <a class="links orange-text colorable_link"
                                                                               href="https://github.com/Dafnik/"
-                                                                              target="_blank">GitHub</a>
-          and <a class="links orange-text colorable_link" href="https://gitlab.com/Dafnik/" target="_blank">GitLab</a>
+                                                                              target="noopener">GitHub</a>
+          and <a class="links orange-text colorable_link" href="https://gitlab.com/Dafnik/" target="noopener">GitLab</a>
           profile! <br>
           <br>
           If you want to support me and my projects, you can send me money with Bitcoin
           [156gYskvxC3jwknERH9QpPV6y6osbvtgj9], Etherum [0xa5b84c7cf052b3cb6745a423914fcacffb85525b] or
-          <a class="links orange-text colorable_link" href="https://paypal.me/Dafnik" target="_blank">PayPal</a>.
+          <a class="links orange-text colorable_link" href="https://paypal.me/Dafnik" target="noopener">PayPal</a>.
         </p>
 
       </div>
@@ -686,21 +707,21 @@
         <p class="grey-text text-lighten-4">
           I made this website with Javascript, HTML5, CSS3 and <a class="links orange-text colorable_link"
                                                                   href="http://materializecss.com/"
-                                                                  target="_blank">Materialize</a>. <br>
+                                                                  target="noopener">Materialize</a>. <br>
           Moreover our server is located in Frankfurt (Germany), it's running
-          <a class="links orange-text colorable_link" href="https://www.debian.org/" target="_blank">Debian</a> 9,
-          <a class="links orange-text colorable_link" href="https://nginx.org/en/" target="_blank">nginx</a> and the
+          <a class="links orange-text colorable_link" href="https://www.debian.org/" target="noopener">Debian</a> 9,
+          <a class="links orange-text colorable_link" href="https://nginx.org/en/" target="noopener">nginx</a> and the
           certificate was
-          signed by <a class="links orange-text colorable_link" href="https://letsencrypt.org/" target="_blank">Let's
+          signed by <a class="links orange-text colorable_link" href="https://letsencrypt.org/" target="noopener">Let's
           Encrypt</a>!
           <br>
           P.S.: If you don't trust me (what I totally understand), take a look into the
-          <a class="links orange-text colorable_link" href="https://github.com/Dafnik/myWeb" target="_blank">source
+          <a class="links orange-text colorable_link" href="https://github.com/Dafnik/myWeb" target="noopener">source
             code</a>!<br><br>
           Furthermore, I have to praise
-          <a class="links orange-text colorable_link" href="https://e9a.at" target="_blank">Bernhard Steindl</a>
+          <a class="links orange-text colorable_link" href="https://e9a.at" target="noopener">Bernhard Steindl</a>
           for the awesome server support and
-          <a class="links orange-text colorable_link" href="https://twitter.com/apflchen" target="_blank">Michael
+          <a class="links orange-text colorable_link" href="https://twitter.com/apflchen" target="noopener">Michael
             Apfelthaler</a>
           for the sick favicon. Checkout their profiles.
         </p>
@@ -709,7 +730,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Made by Dominik Dafert with <a class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>
+      Made by Dominik Dafert with <a class="brown-text text-lighten-3" href="http://materializecss.com" target="noopener">Materialize</a>
       2017-
       <noscript>2018</noscript>
       <script type="text/javascript">document.write(new Date().getFullYear() + "");</script>
@@ -731,7 +752,7 @@
       <ul class="collection with-header hoverable">
         <li class="collection-header black-text"><h5>Libraries</h5></li>
         <li class="collection-item black-text"><a href="https://materializecss.com"
-                                                  class="links orange-text colorable_link" target="_blank">MaterializeCSS</a>
+                                                  class="links orange-text colorable_link" target="noopener">MaterializeCSS</a>
         </li>
       </ul>
 
@@ -739,7 +760,7 @@
         <li class="collection-header black-text"><h5>Licence: GNU Affero General Public License v3.0</h5></li>
         <li class="collection-item black-text">Source Code: <a href="https://github.com/Dafnik/myWeb"
                                                                class="links orange-text colorable_link"
-                                                               target="_blank">GitHub</a></li>
+                                                               target="noopener">GitHub</a></li>
         <li class="collection-item black-text">Version: 1.0-17.04.2018</li>
       </ul>
 
@@ -772,10 +793,16 @@
 
 
 <!--  Scripts-->
-<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/beLazy.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/cookieHandler.js"></script>
 <script type="text/javascript" src="js/theming.js"></script>
-
+<script>
+  (function() {
+    // Initialize
+    let bLazy = new Blazy();
+  })();
+</script>
 </body>
 </html>
