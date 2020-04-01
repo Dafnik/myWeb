@@ -10,7 +10,7 @@ deploy:
     - master
   script:
     - mkdir dafnik
-    - mv -R ./* ./dafnik
+    - mv ./* ./dafnik
     - eval "$(ssh-agent -s)"
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
