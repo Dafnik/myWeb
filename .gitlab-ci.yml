@@ -12,9 +12,9 @@ deploy:
     - cd ../
     - ls -la
     - mkdir ./dafnik
-    - mv .git/ ./dafnik
-    - mv ./dafnik .git/
-    - cd .git/
+    - mv ./myWeb/* ./dafnik
+    - mv ./dafnik ./myWeb
+    - cd ./myWeb
     - eval "$(ssh-agent -s)"
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
