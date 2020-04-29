@@ -10,10 +10,12 @@ pipeline:
       - mv ./myWeb/* ./dafnik
       - mv ./dafnik ./myWeb
       - cd ./myWeb
-      - eval "$(ssh-agent -s)"
-      - echo "$SSH_PRIVATE_KEY" > test.no
-      - ssh-add -p ./test.no
       - mkdir -p ~/.ssh
       - chmod 700 ~/.ssh
+      - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+      - chmod 700 ~/.ssh/id_rsa
+      - eval "$(ssh-agent -s)"
+      - ssh-add ~/.ssh/id_rsa
+      - ssh-keyscan -H '$SSH_HOST' >> ~/.ssh/known_hosts
       - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
       - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
