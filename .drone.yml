@@ -11,7 +11,8 @@ pipeline:
       - mv ./dafnik ./myWeb
       - cd ./myWeb
       - eval "$(ssh-agent -s)"
-      - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+      - echo "$SSH_PRIVATE_KEY" > test.no
+      - ssh-add -p ./test.no
       - mkdir -p ~/.ssh
       - chmod 700 ~/.ssh
       - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
