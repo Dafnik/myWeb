@@ -15,9 +15,6 @@ pipeline:
       - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
       - chmod 700 ~/.ssh/id_rsa
       - eval "$(ssh-agent -s)"
-      - ssh-add ~/.ssh/id_rsa
-      - expect "Enter passphrase for /root/.ssh/id_rsa:"
-      - send ""
       - ssh-keyscan -H '$SSH_HOST' >> ~/.ssh/known_hosts
       - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
       - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
