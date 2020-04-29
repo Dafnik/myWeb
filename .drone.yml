@@ -2,6 +2,11 @@ pipeline:
   deploy:
     name: deploy
     image: trion/ng-cli-karma
+    environment:
+      - SSH_KEY: ${SSH_KEY}
+      - SSH_USERNAME: ${SSH_USERNAME}
+      - SSH_HOST: ${SSH_HOST}
+      - SSH_PORT: ${SSH_PORT}
     commands:
       - cd ../
       - ls -la
@@ -16,4 +21,4 @@ pipeline:
       - eval "$(ssh-agent -s)"
       - ssh-keyscan -H '$SSH_HOST' >> ~/.ssh/known_hosts
       - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
-      - scp -P 3730 -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
+      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
