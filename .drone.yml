@@ -3,7 +3,6 @@ pipeline:
     name: deploy
     image: trion/ng-cli-karma
     commands:
-      - apt-get update -qq && apt-get install -y -qq zip
       - cd ../
       - ls -la
       - mkdir ./dafnik
@@ -17,4 +16,4 @@ pipeline:
       - eval "$(ssh-agent -s)"
       - ssh-keyscan -H '$SSH_HOST' >> ~/.ssh/known_hosts
       - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
-      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
+      - scp -P 3730 -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
