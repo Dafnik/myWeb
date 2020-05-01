@@ -1,25 +1,16 @@
 kind: pipeline
 name: default
 steps:
-  - name: move
-    image: trion/ng-cli-karma
-    commands:
-      - cd ../
-      - ls -la
-      - mkdir ./dafnik
-      - mv ./myWeb/* ./dafnik
-      - mv ./dafnik ./myWeb
-  - name: ssh
-    image: appleboy/drone-ssh
-    settings:
-      username: 
-        from_secret: ssh_username
-      host:
-        from_secret: ssh_host
-      password:
-        from_secret: ssh_password
-      port:
-        from_secret: ssh_port
-      target: /var/www/dafnik
-      source:
-        - myWeb/*
+- name: scp files
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secrect: ssh_host
+    username:
+      from_secrect: ssh_username
+    password:
+      from_secrect: ssh_password
+    port:
+      from_secrect: ssh_port
+    target: ./*
+    source: /var/www/dafnik
