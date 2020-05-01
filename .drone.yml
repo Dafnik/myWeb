@@ -21,8 +21,8 @@ pipeline:
         from_secret: ssh_password
       port:
         from_secret: ssh_port
--     command_timeout: 120
-+     command_timeout: 2m
+      command_timeout: 120
+      command_timeout: 2m
       target: /var/www/dafnik
       source:
         - myWeb/*
