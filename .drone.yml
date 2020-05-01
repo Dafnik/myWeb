@@ -1,8 +1,6 @@
-kind: pipeline
-name: deploying
-
-steps:
-  - name: move
+pipeline:
+  move:
+    name: move
     image: trion/ng-cli-karma
     commands:
       - cd ../
@@ -11,12 +9,14 @@ steps:
       - mv ./myWeb/* ./dafnik
       - mv ./dafnik ./myWeb
 
-  - name: scp
+  scp:
+    name: scp
     image: appleboy/drone-scp
     settings:
       username: 
         from_secret: ${ssh_username}
-      host: "dafnik.me"
+      host:
+        - "dafnik.me"
       password:
         from_secret: ${ssh_password}
       port:
