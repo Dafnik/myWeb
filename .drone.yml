@@ -1,5 +1,7 @@
 kind: pipeline
+type: docker
 name: default
+
 steps:
 - name: scp files
   image: appleboy/drone-scp
