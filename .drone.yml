@@ -13,10 +13,10 @@ pipeline:
     name: deploy
     image: appleboy/drone-scp
     settings:
-      host:
-        from_secret: ssh_host
       username: 
         from_secret: ssh_username
+      host:
+        from_secret: ssh_host
       password:
         from_secret: ssh_password
       port:
