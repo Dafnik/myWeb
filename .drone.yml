@@ -1,28 +1,26 @@
-pipeline:
-  move:
-    name: move
-    image: trion/ng-cli-karma
-    commands:
-      - cd ../
-      - ls -la
-      - mkdir ./dafnik
-      - mv ./myWeb/* ./dafnik
-      - mv ./dafnik ./myWeb
+kind: pipeline
+name: default
+steps:
+- name: move
+  image: trion/ng-cli-karma
+  commands:
+    - cd ../
+    - ls -la
+    - mkdir ./dafnik
+    - mv ./myWeb/* ./dafnik
+    - mv ./dafnik ./myWeb
 
-  scp:
-    name: scp
-    image: appleboy/drone-scp
-    settings:
-      username: 
-        from_secret: ${ssh_username}
-      host:
-        - "dafnik.me"
-      password:
-        from_secret: ${ssh_password}
-      port:
-        from_secret: ${ssh_port}
-      command_timeout: 120
-      command_timeout: 2m
-      target: /var/www/dafnik
-      source:
-        - myWeb/*
+- name: ssh
+  image: appleboy/drone-ssh
+  settings:
+    username: 
+      from_secret: ssh_username
+    host:
+      from_secret: ssh_host
+    password:
+      from_secret: ssh_password
+    port:
+      from_secret: ssh_port
+    target: /var/www/dafnik
+    source:
+      - myWeb/*
