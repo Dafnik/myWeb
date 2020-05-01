@@ -1,24 +1,28 @@
 pipeline:
-  deploy:
-    name: deploy
+  move:
+    name: move
     image: trion/ng-cli-karma
-    environment:
-      - SSH_KEY: ${SSH_KEY}
-      - SSH_USERNAME: ${SSH_USERNAME}
-      - SSH_HOST: ${SSH_HOST}
-      - SSH_PORT: ${SSH_PORT}
     commands:
       - cd ../
       - ls -la
       - mkdir ./dafnik
       - mv ./myWeb/* ./dafnik
       - mv ./dafnik ./myWeb
-      - cd ./myWeb
-      - mkdir -p ~/.ssh
-      - chmod 700 ~/.ssh
-      - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-      - chmod 700 ~/.ssh/id_rsa
-      - eval "$(ssh-agent -s)"
-      - ssh-keyscan -H '$SSH_HOST' >> ~/.ssh/known_hosts
-      - echo -e “Host *\n\tStrictHostKeyChecking no\n\n” > ~/.ssh/config
-      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./dafnik/* $SSH_USERNAME@$SSH_HOST:/var/www/dafnik > /dev/null
+
+  deploy:
+    name: deploy
+    image: appleboy/drone-scp
+    settings:
+      host:
+        - from_secret: ssh_host
+      username: 
+        from_secret: ssh_username
+      password:
+        from_secret: ssh_password
+      port:
+        from_secret: ssh_port
+-     command_timeout: 120
++     command_timeout: 2m
+      target: /var/www/dafnik
+      source:
+        - myWeb/*
