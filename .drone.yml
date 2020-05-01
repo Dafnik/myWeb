@@ -15,8 +15,7 @@ pipeline:
     settings:
       username: 
         from_secret: ${ssh_username}
-      host:
-        from_secret: ${ssh_host}
+      host: "dafnik.me"
       password:
         from_secret: ${ssh_password}
       port:
