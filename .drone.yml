@@ -14,7 +14,7 @@ pipeline:
     image: appleboy/drone-scp
     settings:
       host:
-        - dafnik.me
+        from_secret: ssh_host
       username: 
         from_secret: ssh_username
       password:
