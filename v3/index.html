@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dafnik ⚛ Dominik</title>
+
+  <link rel="shortcut icon" type="image/favicon.ico" href="images/favicon.ico">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description"
+        content="This is my personal website, where you can find projects and social media accounts!"/>
+
+  <!-- CSS -->
+  <style>
+    @font-face {
+      font-family: tron;
+      src: url(fonts/TRON.TTF);
+    }
+
+    @font-face {
+      font-family: Roboto;
+      src: url(fonts/roboto.woff2) format('woff2');
+    }
+
+    body {
+      margin: 0;
+      font: normal 75% Roboto;
+      width: 100%;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+
+    .content {
+      display: block;
+      position: absolute;
+      top: 0.5%;
+      left: 5vh;
+      z-index: 100;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="content"] {
+        top: 5%
+      }
+    }
+
+    .name {
+      font-family: tron, serif;
+      font-size: 60px;
+      color: black;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="name"] {
+        font-size: 50px;
+      }
+    }
+
+    .section {
+      margin-top: 5%;
+    }
+
+    .heading {
+      font-family: tron, serif;
+      font-size: 40px;
+      color: black;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="heading"] {
+        font-size: 25px;
+      }
+    }
+
+    .list {
+      padding-top: 2%;
+    }
+
+    .list-entry {
+      font-size: 40px;
+      color: black;
+      transition: 0.3s;
+      text-decoration: none;
+
+      display: flex;
+    }
+
+    .list-entry:hover {
+      color: #039be5;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="list-entry"] {
+        font-size: 25px;
+      }
+    }
+
+    /** CONTACT **/
+    .contact-list-entry-platform {
+      width: 22vh;
+    }
+
+    @media only screen and (max-width: 768px) {
+      [class*="contact-list-entry-platform"] {
+        width: 18vh;
+      }
+    }
+
+    .contact-list-entry-username {
+      text-align: left;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="content">
+  <div class="name">DAFNIK</div>
+
+  <div class="section">
+    <div class="heading">-) CONTACT ME</div>
+    <ul class="list">
+      <li>
+        <a class="list-entry" rel="noopener" href="mailto:contact@dafnik.me" target="_blank">
+          <div class="contact-list-entry-platform">contact</div>
+          <div class="contact-list-entry-username">email</div>
+        </a>
+      </li>
+
+      <li>
+        <a class="list-entry" rel="noopener" href="myPGPKey.html" target="_blank">
+          <div class="contact-list-entry-platform">pgp</div>
+          <div class="contact-list-entry-username">key</div>
+        </a>
+      </li>
+
+      <li>
+        <a class="list-entry" rel="noopener" href="https://github.com/dafnik" target="_blank">
+          <div class="contact-list-entry-platform">github</div>
+          <div class="contact-list-entry-username">/dafnik</div>
+        </a>
+      </li>
+
+      <li>
+        <a class="list-entry" rel="noopener" href="https://gitlab.com/dafnik" target="_blank">
+          <div class="contact-list-entry-platform">gitlab</div>
+          <div class="contact-list-entry-username">/dafnik</div>
+        </a>
+      </li>
+
+      <li>
+        <a rel="me" href="https://voi.social/@dafnik" class="list-entry" target="_blank">
+          <div class="contact-list-entry-platform">mastodon</div>
+          <div class="contact-list-entry-username">/@dafnik</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="heading">-) PROJECTS</div>
+    <ul class="list">
+      <li>
+        <a class="list-entry" rel="noopener" href="https://gitlab.com/BuergerkorpsEggenburg/"
+           target="_blank">DatePoll</a>
+      </li>
+      <li>
+        <a class="list-entry" rel="noopener" href="https://blog.dafnik.me"
+           target="_blank">MicroBlog</a>
+      </li>
+      <li>
+        <a class="list-entry" rel="noopener" href="https://gitlab.com/Dafnik/SharingIsCaring" target="_blank">Sharing
+          Is Caring</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
