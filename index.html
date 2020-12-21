@@ -10,98 +10,71 @@
   <meta name="description"
         content="This is my personal website, here you can find passionate projects and awesome social media accounts!"/>
 
-  <link rel="stylesheet" href="xp.css">
+  <link rel="stylesheet" href="styles.css">
 
-  <style>
-    @media only screen and (max-width: 800px) {
-      .last-button {
-        margin-top: 10px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-<div class="window" style="width: 50vh" id="myWeb">
-  <div class="title-bar">
-    <div class="title-bar-text">Dafnik</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"
-              onclick="document.getElementById('myWeb-body').hidden = !document.getElementById('myWeb-body').hidden"></button>
-      <button aria-label="Close" onclick="document.getElementById('myWeb').hidden = true"></button>
-    </div>
-  </div>
-  <div class="window-body" id="myWeb-body">
-    <p>This is my personal website, here you can find passionate projects and awesome social media accounts!</p>
-  </div>
+
+<div id="sideName">Dafnik.me</div>
+<div id="sideDescription" style="margin-bottom: 25px;">This is my personal website, here you can find passionate
+  projects and awesome social media accounts!
 </div>
 
-<div class="window" style="width: 30vh; margin-top: 10px;" id="contact">
-  <div class="title-bar">
-    <div class="title-bar-text">Contact me</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"
-              onclick="document.getElementById('contact-body').hidden = !document.getElementById('contact-body').hidden"></button>
-      <button aria-label="Close" onclick="document.getElementById('contact').hidden = true"></button>
-    </div>
-  </div>
-  <div class="window-body" id="contact-body">
-    <a rel="noopener" target="_blank" href="mailto:contact@dafnik.me">
-      <button>email me</button>
-    </a>
-    <a rel="noopener" target="_blank" href="myPGPKey.html">
-      <button>gpg key</button>
-    </a>
-    <div><br></div>
-    <a rel="noopener" target="_blank" href="https://gitlab.com/dafnik">
-      <button>gitlab</button>
-    </a>
-    <a rel="noopener" target="_blank" href="https://github.com/dafnik">
-      <button>github</button>
-    </a>
-    <a rel="noopener" target="_blank" href="https://code.voi.social/dafnik">
-      <button class="last-button">gitea (code.voi.social)</button>
-    </a>
-    <div><br></div>
-    <a target="_blank" href="https://voi.social/@dafnik" rel="me">
-      <button>mastodon (voi.social)</button>
-    </a>
-  </div>
-</div>
+<div class="row">
+  <div class="column">
+    <h3>Social media & contact information</h3>
+    <ol>
+      <li>
+        <a class="link" rel="noopener" href="mailto:contact@dafnik.me" target="_blank">contact@dafnik.me</a>
+      </li>
 
-<div class="window" style="width: 40vh; margin-top: 10px;" id="projects">
-  <div class="title-bar">
-    <div class="title-bar-text">Projects</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"
-              onclick="document.getElementById('projects-body').hidden = !document.getElementById('projects-body').hidden"></button>
-      <button aria-label="Close" onclick="document.getElementById('projects').hidden = true"></button>
-    </div>
-  </div>
-  <div class="window-body" id="projects-body">
-    <a rel="noopener" target="_blank" href="https://datepoll.org">
-      <button style="width: 100%">DatePoll (club management application)</button>
-    </a>
-    <div><br></div>
-    <a rel="noopener" target="_blank" href="https://blog.dafnik.me">
-      <button>MicroBlog (minimal blogging portal)</button>
-    </a>
-  </div>
-</div>
+      <li>
+        <a class="link" rel="noopener" href="myPGPKey.html" target="_blank">pgp key</a>
+      </li>
 
-<div class="window" style="width: 24vh; margin-top: 10px;" id="old-myWeb">
-  <div class="title-bar">
-    <div class="title-bar-text">Old myWeb</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"
-              onclick="document.getElementById('old-myWeb-body').hidden = !document.getElementById('old-myWeb-body').hidden"></button>
-      <button aria-label="Close" onclick="document.getElementById('old-myWeb').hidden = true"></button>
-    </div>
+      <li>
+        <a class="link" rel="noopener" href="https://github.com/dafnik" target="_blank">github.com/Dafnik</a>
+      </li>
+
+      <li>
+        <a class="link" rel="noopener" href="https://gitlab.com/dafnik" target="_blank">gitlab.com/Dafnik</a>
+      </li>
+
+      <li>
+        <a rel="me" href="https://voi.social/@dafnik" class="link" target="_blank">voi.social/@Dafnik</a>
+      </li>
+    </ol>
   </div>
-  <div class="window-body" id="old-myWeb-body">
-    <a rel="noopener" href="./v3/index.html">
-      <button>myWeb v3</button>
-    </a>
+
+  <div class="column">
+    <h3>Projects</h3>
+    <ol>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://datepoll.org">DatePoll (club management
+          application)</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://voi.social">voi.social (austrian mastodon
+          instance)</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://voi.social/@year_progress">year progress bot
+          (mastodon bot)</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://blog.dafnik.me">MicroBlog</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="./v4/index.html">myWebv4</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="./v3/index.html">myWebv3</a>
+      </li>
+    </ol>
   </div>
 </div>
-</body>
