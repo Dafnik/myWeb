@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>dafnik ⚛ Dominik</title>
+  <title>dafnik.me ⚛ Dominik</title>
 
   <link rel="shortcut icon" type="image/favicon.ico" href="images/favicon.ico">
 
@@ -16,7 +16,9 @@
 
 <body>
 
-<div id="sideName">Dafnik.me</div>
+<div>
+ <span id="nameBig">Dominik Dafert</span><br class="mobileBreak"><span id="nameSmall"> or you maybe know me as Dafnik.</span>
+</div>
 <div id="sideDescription" style="margin-bottom: 25px;">This is my personal website, here you can find passionate
   projects and awesome social media accounts!
 </div>
@@ -26,23 +28,19 @@
     <h3>Social media & contact information</h3>
     <ol>
       <li>
+        <a class="link" rel="noopener" href="https://gitlab.com/dafnik" target="_blank">gitlab.com/Dafnik (source code)</a>
+      </li>
+      <li>
         <a class="link" rel="noopener" href="mailto:contact@dafnik.me" target="_blank">contact@dafnik.me</a>
       </li>
-
       <li>
         <a class="link" rel="noopener" href="myPGPKey.html" target="_blank">pgp key</a>
       </li>
-
       <li>
-        <a class="link" rel="noopener" href="https://github.com/dafnik" target="_blank">github.com/Dafnik</a>
+        <a rel="me" href="https://voi.social/@dafnik" class="link" target="_blank">voi.social/@Dafnik (mastodon)</a>
       </li>
-
       <li>
-        <a class="link" rel="noopener" href="https://gitlab.com/dafnik" target="_blank">gitlab.com/Dafnik</a>
-      </li>
-
-      <li>
-        <a rel="me" href="https://voi.social/@dafnik" class="link" target="_blank">voi.social/@Dafnik</a>
+        <a class="link" rel="noopener" href="https://github.com/dafnik" target="_blank">github.com/Dafnik (source code)</a>
       </li>
     </ol>
   </div>
@@ -59,11 +57,18 @@
           instance)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" target="_blank" href="https://voi.social/@year_progress">year progress bot
-          (mastodon bot)</a>
+        <a class="link" rel="noopener" target="_blank" href="https://share.dafnik.me">share.dafnik.me (html share)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" target="_blank" href="https://blog.dafnik.me">MicroBlog</a>
+        <a class="link" rel="noopener" target="_blank" href="https://status.dafnik.me">status.dafnik.me (service status
+          monitor)</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://blog.dafnik.me">blog.dafnik.me (MicroBlog)</a>
+      </li>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://voi.social/@year_progress">year progress bot
+          (mastodon bot)</a>
       </li>
       <li>
         <a class="link" rel="noopener" target="_blank" href="./v4/index.html">myWebv4</a>
@@ -74,3 +79,9 @@
     </ol>
   </div>
 </div>
+</body>
+<script type="application/javascript">
+  const colors = ["#FFCA28", "#8BC34A", "#1DE9B6", "#40C4FF", "#81D4FA"];
+  document.getElementById('nameBig').style.color = colors[Math.floor(Math.random() * colors.length)];
+</script>
+</html>

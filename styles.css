@@ -6,9 +6,19 @@ body {
     padding: 0;
 }
 
-#sideName {
+#nameBig {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 8vh;
+    color: #81D4FA;
+}
+
+.mobileBreak {
+    display: none;
+}
+
+#nameSmall {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.3vh;
 }
 
 #sideDescription {
@@ -51,7 +61,7 @@ li {
     position: absolute;
     bottom: -4px;
     left: -10px;
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all .18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .link:hover::after {
@@ -67,18 +77,15 @@ li {
     flex: 33%;
 }
 
-iframe {
-    float: right;
-    width: 600px;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1090px) {
     .column {
         flex: 100%;
         width: 100%;
     }
+}
 
-    iframe {
-        float: none;
+@media screen and (max-width: 1440px) {
+    .mobileBreak {
+        display: flex;
     }
 }
