@@ -14,23 +14,256 @@
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="dafnik.me ⚛ Dominik"/>
   <meta property="og:description"
-        content="This is my personal website, here you can find passionate projects and awesome social media accounts."/>
+        content="Find passionate projects and awesome social media accounts from me."/>
   <meta property="og:image" content="https://dafnik.me/images/favicon.ico"/>
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preload" href="/fonts/fonts.css" as="style">
-  <link rel="stylesheet" href="./fonts/fonts.css">
+  <style>
+      /* cyrillic-ext */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD2OwG_TA.woff2") format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD_OwG_TA.woff2") format('woff2');
+          unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* greek */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD4OwG_TA.woff2") format('woff2');
+          unicode-range: U+0370-03FF;
+      }
+      /* vietnamese */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD0OwG_TA.woff2") format('woff2');
+          unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD1OwG_TA.woff2") format('woff2');
+          unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 200;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD7OwE.woff2") format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* cyrillic-ext */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD2OwG_TA.woff2") format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD_OwG_TA.woff2") format('woff2');
+          unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* greek */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD4OwG_TA.woff2") format('woff2');
+          unicode-range: U+0370-03FF;
+      }
+      /* vietnamese */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD0OwG_TA.woff2") format('woff2');
+          unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD1OwG_TA.woff2") format('woff2');
+          unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+          font-family: 'JetBrains Mono';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url("./fonts/tDbV2o-flEEny0FZhsfKu5WU4xD7OwE.woff2") format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* vietnamese */
+      @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url("./fonts/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXsrPMBTTA.woff2") format('woff2');
+          unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url("./fonts/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXsqPMBTTA.woff2") format('woff2');
+          unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url("./fonts/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMA.woff2") format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+
+      body {
+          background-color: #000000;
+          color: white;
+          font-size: 1.4vh;
+          margin: 0 0 0 10px;
+          padding: 0;
+      }
+
+      #nameBig {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 8vh;
+      }
+
+      /*noinspection ALL*/
+      .rainbow {
+          background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+          color:transparent;
+          background-clip: text;
+      }
+
+      .mobileBreak {
+          display: none;
+      }
+
+      #nameSmall {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 2.3vh;
+      }
+
+      #sideDescription {
+          font-family: 'JetBrains Mono', monospace;
+      }
+
+      h3 {
+          font-family: 'Space Grotesk', sans-serif;
+          font-weight: normal;
+          padding-top: 20px;
+          font-size: 2vh;
+      }
+
+      ol {
+          list-style-type: cjk-ideographic;
+          margin-left: 2%;
+      }
+
+      li {
+          margin-top: 25px;
+          font-size: 1.8vh;
+          font-family: 'JetBrains Mono', monospace;
+          font-weight: normal;
+      }
+
+      .link {
+          width: 90%;
+          display: block;
+          color: white;
+          text-decoration: none;
+          position: relative;
+      }
+
+      .link::after {
+          content: "";
+          background: white;
+          mix-blend-mode: exclusion;
+          width: calc(100% + 20px);
+          height: 0;
+          position: absolute;
+          bottom: -4px;
+          left: -10px;
+          transition: all .18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+
+      .link:hover::after {
+          height: calc(100% + 8px)
+      }
+
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+      }
+
+      .column {
+          flex: 33%;
+      }
+
+      @media screen and (max-width: 1090px) {
+          .column {
+              flex: 100%;
+              width: 100%;
+          }
+      }
+
+      @media screen and (max-width: 1440px) {
+          .mobileBreak {
+              display: flex;
+          }
+      }
+  </style>
 </head>
 
 <body>
 
 <div>
-  <span id="nameBig">Dominik Dafert</span><br class="mobileBreak"><span
+  <span id="nameBig">Dominik</span><br class="mobileBreak"><span
   id="nameSmall"> or you maybe know me as Dafnik.</span>
 </div>
-<div id="sideDescription" style="margin-bottom: 25px;">This is my personal website, here you can find passionate
-  projects and awesome social media accounts.
-</div>
+<div id="sideDescription" style="margin-bottom: 25px;">
+  This is my personal website, here you can find passionate projects and awesome social media accounts.</div>
 
 <div class="row">
   <div class="column">
@@ -41,13 +274,13 @@
           code)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" href="mailto:contact@dafnik.me" target="_blank">contact@dafnik.me</a>
+        <a class="link" rel="noopener" href="mailto:contact@dafnik.me" target="_blank">contact@dafnik.me (email)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" href="myPGPKey.html" target="_blank">pgp key</a>
+        <a class="link" rel="noopener" href="myPGPKey.html" target="_blank">pgp key (encrypted email)</a>
       </li>
       <li>
-        <a rel="me" href="https://voi.social/@dafnik" class="link" target="_blank">voi.social/@Dafnik (mastodon)</a>
+        <a rel="me noopener" href="https://voi.social/@dafnik" class="link" target="_blank">voi.social/@Dafnik (mastodon)</a>
       </li>
       <li>
         <a class="link" rel="noopener" href="https://github.com/dafnik" target="_blank">github.com/Dafnik (source
@@ -57,37 +290,40 @@
   </div>
 
   <div class="column">
-    <h3>Projects</h3>
+    <h3>Projects in groups</h3>
     <ol>
       <li>
-        <a class="link" rel="noopener" target="_blank" href="https://datepoll.org">DatePoll (club management
-          application)</a>
+        <a class="link" rel="noopener" target="_blank" href="https://datepoll.org">DatePoll Systems</a>
       </li>
       <li>
         <a class="link" rel="noopener" target="_blank" href="https://voi.social">voi.social (austrian mastodon
           instance)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" target="_blank" href="https://translate.dafnik.me">translate.dafnik.me (machine translation service)</a>
+        <a class="link" rel="noopener" target="_blank" href="https://releases.datepoll.org">releases.datepoll.org
+          (release server)</a>
+      </li>
+    </ol>
+
+    <h3>Personal projects</h3>
+    <ol>
+      <li>
+        <a class="link" rel="noopener" target="_blank" href="https://datepoll.org/projects/datepoll">DatePoll (club managment application)</a>
       </li>
       <li>
         <a class="link" rel="noopener" target="_blank" href="https://voi.social/@year_progress">year progress bot
           (mastodon bot)</a>
       </li>
       <li>
-        <a class="link" rel="noopener" target="_blank" href="https://releases.datepoll.org">releases.datepoll.org
-          (release server)</a>
+        <a class="link" rel="noopener" target="_blank" href="https://translate.dafnik.me">translate.dafnik.me (machine translation service)</a>
       </li>
       <li>
         <a class="link" rel="noopener" target="_blank" href="https://share.dafnik.me">share.dafnik.me (html share)</a>
       </li>
-      <li>
-        <a class="link" rel="noopener" target="_blank" href="https://status.dafnik.me">status.dafnik.me (service status
-          monitor)</a>
-      </li>
-      <li>
-        <a class="link" rel="noopener" target="_blank" href="https://blog.dafnik.me">blog.dafnik.me (MicroBlog)</a>
-      </li>
+    </ol>
+
+    <h3>Old personal websites</h3>
+    <ol>
       <li>
         <a class="link" rel="noopener" target="_blank" href="./v4/index.html">myWebv4</a>
       </li>
@@ -99,7 +335,22 @@
 </div>
 </body>
 <script type="application/javascript">
-  const colors = ["#FFCA28", "#8BC34A", "#1DE9B6", "#40C4FF", "#81D4FA"];
-  document.getElementById('nameBig').style.color = colors[Math.floor(Math.random() * colors.length)];
+  if (new Date().getMonth() === 5) {
+    document.getElementById('nameBig').classList.add("rainbow")
+  } else {
+    const colors = [
+      "#90A4AE",
+      "#AED581",
+      "#8BC34A",
+      "#1DE9B6",
+      "#29B6F6",
+      "#40C4FF",
+      "#536DFE",
+      "#B39DDB",
+      "#4DB6AC",
+      "#81D4FA",
+      "#18FFFF"];
+    document.getElementById('nameBig').style.color = colors[Math.floor(Math.random() * colors.length)];
+  }
 </script>
 </html>
