@@ -138,6 +138,8 @@
           background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
           color: transparent;
           background-clip: text;
+          /* Fuck you chrome! https://caniuse.com/?search=background-clip%3A%20webkit */
+          -webkit-background-clip: text;
       }
 
       .mobileBreak {
@@ -151,6 +153,8 @@
 
       #sideDescription {
           font-family: 'JetBrains Mono', monospace;
+          font-weight: normal;
+          font-size: 2vh;
       }
 
       h3 {
@@ -230,13 +234,13 @@
   <span id="nameBig">Dominik</span><br class="mobileBreak"><span
   id="nameSmall"> or you maybe know me as Dafnik.</span>
 </div>
-<div id="sideDescription" style="margin-bottom: 25px;">
+<h1 id="sideDescription" style="margin-bottom: 25px;">
   This is my personal website, here you can find passionate projects and awesome social media accounts.
-</div>
+</h1>
 
 <div class="row">
   <div class="column">
-    <h3>Social media & contact information</h3>
+    <h3>social media & contact information</h3>
     <ol>
       <li>
         <a class="link" rel="noopener" href="https://gitlab.com/Dafnik" target="_blank">gitlab.com/Dafnik (source
@@ -263,7 +267,7 @@
   </div>
 
   <div class="column">
-    <h3>Projects in groups</h3>
+    <h3>projects in groups</h3>
     <ol>
       <li>
         <a class="link" rel="noopener" target="_blank" href="https://datepoll.org">DatePoll Systems</a>
@@ -281,7 +285,7 @@
       </li>
     </ol>
 
-    <h3>Personal projects</h3>
+    <h3>personal projects</h3>
     <ol>
       <li>
         <a class="link" rel="noopener" target="_blank" href="https://datepoll.org/projects/datepoll">DatePoll (club
@@ -300,7 +304,7 @@
       </li>
     </ol>
 
-    <h3>Other stuff</h3>
+    <h3>other stuff</h3>
     <ol>
       <li>
         <a class="link" rel="noopener" href="https://status.dafnik.me">status monitor</a>
