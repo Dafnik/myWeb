@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /js/
-Disallow: /fonts/TRON.TFF
-Disallow: /keybase.txt
-Disallow: /README.md
-Disallow: /LICENSE
-Allow: /
