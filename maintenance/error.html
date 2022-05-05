@@ -147,45 +147,28 @@
   </template>
 </div>
 </body>
-<!--suppress JSUnresolvedVariable -->
 <script>
-  let automaticRefresh = true;
+  const contactEmail = null;
   let timeToRefreshInSeconds = 15;
+  let automaticRefresh = true;
 
-  loadContact();
-
-  document.getElementById("areYouAlone").setAttribute("href", "https://isitup.org/" + window.location.hostname)
   for (const hiddenElementToShow of document.getElementsByClassName("jsShow")) {
     hiddenElementToShow.style.display = "block";
-
   }
   for (const shownElementToHide of document.getElementsByClassName("jsHide")) {
     shownElementToHide.style.display = "none";
   }
 
-  function loadContact() {
-    const request = new XMLHttpRequest();
-    request.overrideMimeType("application/json");
-    request.open("GET", "settings.json", true);
-    request.onloadend = () => {
-      countdown();
-    }
-    request.onreadystatechange = () => {
-      if (request.readyState === 4 && request.status === 200) {
-        if (request.responseText) {
-          const settings = JSON.parse(request.responseText);
-          if (settings.refreshTimerInSeconds != null) {
-            timeToRefreshInSeconds = settings.refreshTimerInSeconds;
-          }
-          const element = document.getElementById("contactEmail");
-          element.href = "mailto:" + settings.email;
-          element.innerHTML = settings.email;
-          document.getElementById("contactEmailBox").style.display = "block"
-        }
-      }
-    };
-    request.send(null);
+  document.getElementById("areYouAlone").setAttribute("href", "https://isitup.org/" + window.location.hostname)
+
+  if (contactEmail?.length > 0) {
+    const element = document.getElementById("contactEmail");
+    element.href = "mailto:" + contactEmail;
+    element.innerText = contactEmail;
+    document.getElementById("contactEmailBox").style.display = "block"
   }
+
+  countdown();
 
   function toggleCountdown() {
     automaticRefresh = !automaticRefresh;
