@@ -194,7 +194,8 @@
   }
 
   function countdown() {
-    if (Runner?.instance_?.playing || !automaticRefresh) {
+    if ((Runner?.instance_?.playing && !Runner?.instance_?.paused) || !automaticRefresh) {
+      automaticRefresh = false;
       document.getElementById("countdown").innerText = "Automatic refresh paused";
       return;
     }
