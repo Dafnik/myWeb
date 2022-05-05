@@ -12,11 +12,6 @@
   <!-- Tell Google Chrome not to translate this site -->
   <meta name="google" content="notranslate"/>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" sizes="any" href="favis/favicon.svg"/>
-  <link rel="icon" type="image/x-icon" href="favis/favicon.ico"/>
-  <link rel="icon" type="image/png" href="favis/favicon.png"/>
-
   <style>
       body {
           font: 20px Helvetica, sans-serif;
@@ -147,52 +142,6 @@
   </template>
 </div>
 </body>
-<script>
-  const contactEmail = null;
-  let timeToRefreshInSeconds = 15;
-  let automaticRefresh = true;
-
-  for (const hiddenElementToShow of document.getElementsByClassName("jsShow")) {
-    hiddenElementToShow.style.display = "block";
-  }
-  for (const shownElementToHide of document.getElementsByClassName("jsHide")) {
-    shownElementToHide.style.display = "none";
-  }
-
-  document.getElementById("areYouAlone").setAttribute("href", "https://isitup.org/" + window.location.hostname)
-
-  if (contactEmail?.length > 0) {
-    const element = document.getElementById("contactEmail");
-    element.href = "mailto:" + contactEmail;
-    element.innerText = contactEmail;
-    document.getElementById("contactEmailBox").style.display = "block"
-  }
-
-  countdown();
-
-  function toggleCountdown() {
-    automaticRefresh = !automaticRefresh;
-    if (automaticRefresh) {
-      countdown();
-    } else {
-      document.getElementById("countdown").innerText = "Automatic refresh paused";
-    }
-  }
-
-  function countdown() {
-    if ((Runner?.instance_?.playing && !Runner?.instance_?.paused) || !automaticRefresh) {
-      automaticRefresh = false;
-      document.getElementById("countdown").innerText = "Automatic refresh paused";
-      return;
-    }
-    document.getElementById("countdown").innerText = "Automatic refresh in " + timeToRefreshInSeconds + " seconds";
-    if (timeToRefreshInSeconds === 0) {
-      location.reload();
-    }
-    timeToRefreshInSeconds--;
-    setTimeout(countdown, 1000);
-  }
-</script>
 
 <!-- Dino code -->
 <!--suppress EqualityComparisonWithCoercionJS, JSUnusedGlobalSymbols, JSPotentiallyInvalidConstructorUsage, CommaExpressionJS, ES6ConvertVarToLetConst, JSUnresolvedVariable, JSUnresolvedFunction, SpellCheckingInspection, JSUnusedLocalSymbols, JSUnusedAssignment, JSDeprecatedSymbols -->
@@ -260,7 +209,53 @@
       this.xPos[0]?this.updateXPos(0,c):this.updateXPos(1,c);this.draw()},reset:function(){this.xPos[0]=0;this.xPos[1]=k.dimensions.WIDTH}};v.config={BG_CLOUD_SPEED:.2,BUMPY_THRESHOLD:.3,CLOUD_FREQUENCY:.5,HORIZON_HEIGHT:16,MAX_CLOUDS:6};v.prototype={init:function(){this.addCloud();this.horizonLine=new k(this.canvas,this.spritePos.HORIZON);this.nightMode=new e(this.canvas,this.spritePos.MOON,this.dimensions.WIDTH)},update:function(a,b,c,e){this.runningTime+=a;this.horizonLine.update(a,b);this.nightMode.update(e);
         this.updateClouds(a,b);c&&this.updateObstacles(a,b)},updateClouds:function(a,b){var c=this.cloudSpeed/1E3*a*b,e=this.clouds.length;if(e){for(var f=e-1;0<=f;f--)this.clouds[f].update(c);c=this.clouds[e-1];e<this.config.MAX_CLOUDS&&this.dimensions.WIDTH-c.xPos>c.cloudGap&&this.cloudFrequency>Math.random()&&this.addCloud();this.clouds=this.clouds.filter(function(a){return!a.remove})}else this.addCloud()},updateObstacles:function(a,b){for(var c=this.obstacles.slice(0),e=0;e<this.obstacles.length;e++){var f=
         this.obstacles[e];f.update(a,b);f.remove&&c.shift()}this.obstacles=c;0<this.obstacles.length?(c=this.obstacles[this.obstacles.length-1])&&!c.followingObstacleCreated&&c.isVisible()&&c.xPos+c.width+c.gap<this.dimensions.WIDTH&&(this.addNewObstacle(b),c.followingObstacleCreated=!0):this.addNewObstacle(b)},removeFirstObstacle:function(){this.obstacles.shift()},addNewObstacle:function(a){var b=q(0,m.types.length-1);b=m.types[b];this.duplicateObstacleCheck(b.type)||a<b.minSpeed?this.addNewObstacle(a):
-        (this.obstacles.push(new m(this.canvasCtx,b,this.spritePos[b.type],this.dimensions,this.gapCoefficient,a,b.width)),this.obstacleHistory.unshift(b.type),1<this.obstacleHistory.length&&this.obstacleHistory.splice(c.config.MAX_OBSTACLE_DUPLICATION))},duplicateObstacleCheck:function(a){for(var b=0,d=0;d<this.obstacleHistory.length;d++)b=this.obstacleHistory[d]==a?b+1:0;return b>=c.config.MAX_OBSTACLE_DUPLICATION},reset:function(){this.obstacles=[];this.horizonLine.reset();this.nightMode.reset()},resize:function(a,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         b){this.canvas.width=a;this.canvas.height=b},addCloud:function(){this.clouds.push(new p(this.canvas,this.spritePos.CLOUD,this.dimensions.WIDTH))}}})();var HIDDEN_CLASS="hidden";function onDocumentLoad(){new Runner(".interstitial-wrapper")}document.addEventListener("DOMContentLoaded",onDocumentLoad);
+        (this.obstacles.push(new m(this.canvasCtx,b,this.spritePos[b.type],this.dimensions,this.gapCoefficient,a,b.width)),this.obstacleHistory.unshift(b.type),1<this.obstacleHistory.length&&this.obstacleHistory.splice(c.config.MAX_OBSTACLE_DUPLICATION))},duplicateObstacleCheck:function(a){for(var b=0,d=0;d<this.obstacleHistory.length;d++)b=this.obstacleHistory[d]==a?b+1:0;return b>=c.config.MAX_OBSTACLE_DUPLICATION},reset:function(){this.obstacles=[];this.horizonLine.reset();this.nightMode.reset()},resize:function(a, b){this.canvas.width=a;this.canvas.height=b},addCloud:function(){this.clouds.push(new p(this.canvas,this.spritePos.CLOUD,this.dimensions.WIDTH))}}})();var HIDDEN_CLASS="hidden";function onDocumentLoad(){new Runner(".interstitial-wrapper")}document.addEventListener("DOMContentLoaded",onDocumentLoad);
+</script>
+
+<script>
+  const contactEmail = null;
+  let timeToRefreshInSeconds = 15;
+  let automaticRefresh = true;
+
+  for (const hiddenElementToShow of document.getElementsByClassName("jsShow")) {
+    hiddenElementToShow.style.display = "block";
+  }
+  for (const shownElementToHide of document.getElementsByClassName("jsHide")) {
+    shownElementToHide.style.display = "none";
+  }
+
+  document.getElementById("areYouAlone").setAttribute("href", "https://isitup.org/" + window.location.hostname)
+
+  if (contactEmail?.length > 0) {
+    const element = document.getElementById("contactEmail");
+    element.href = "mailto:" + contactEmail;
+    element.innerText = contactEmail;
+    document.getElementById("contactEmailBox").style.display = "block"
+  }
+
+  countdown();
+
+  function toggleCountdown() {
+    automaticRefresh = !automaticRefresh;
+    if (automaticRefresh) {
+      countdown();
+    } else {
+      document.getElementById("countdown").innerText = "Automatic refresh paused";
+    }
+  }
+
+  function countdown() {
+    if ((Runner?.instance_?.playing && !Runner?.instance_?.paused) || !automaticRefresh) {
+      automaticRefresh = false;
+      document.getElementById("countdown").innerText = "Automatic refresh paused";
+      return;
+    }
+    document.getElementById("countdown").innerText = "Automatic refresh in " + timeToRefreshInSeconds + " seconds";
+    if (timeToRefreshInSeconds === 0) {
+      location.reload();
+    }
+    timeToRefreshInSeconds--;
+    setTimeout(countdown, 1000);
+  }
 </script>
 </html>
