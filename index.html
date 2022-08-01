@@ -302,7 +302,7 @@
 
 <div>
   <span class="nameMiddle">Hi! I'm</span><br class="mobileBreak">
-  <span id="nameBig">Dominik</span><br class="mobileBreak"><span
+  <span id="nameBig" class="rainbow-text">Dominik</span><br class="mobileBreak"><span
   class="nameSmall"> or you maybe know me as Dafnik.</span>
 </div>
 <h1 id="sideDescription" style="margin-bottom: 25px;">
@@ -415,6 +415,7 @@
 </div>
 </body>
 <script type="application/javascript">
+  document.getElementById('nameBig').classList.remove("rainbow-text")
   if (new Date().getMonth() === 5) {
     document.getElementById('nameBig').classList.add("rainbow-text")
   } else {
