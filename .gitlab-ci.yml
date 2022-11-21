@@ -4,7 +4,7 @@ deploy:
   stage: deploy
   cache: {}
   only:
-    - master
+    - main
   script:
     - apt-get update -qq && apt-get install -y -qq zip openssh-client >> /dev/null
     - eval "$(ssh-agent -s)"
