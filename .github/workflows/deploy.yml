@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        run: |
+          rm -rf .git/
+          rm -rf .github/
+          rm -rf .gitignore
+          rm -rf gitlab-ci
+          rm -rf .idea/
+          rm -rf renovate.json
+          rm -rf README.md
       - name: Copy folder to remote
         uses: garygrossgarten/github-action-scp@release
         with:
@@ -19,3 +27,4 @@ jobs:
             port: ${{ secrets.SSH_PORT }}
             username: ${{ secrets.SSH_USER }}
             privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+            rmRemote: true
