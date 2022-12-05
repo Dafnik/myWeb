@@ -14,6 +14,6 @@ jobs:
   action:
     runs-on: ubuntu-latest
     steps:
-      - uses: dessant/repo-lockdown@v2
+      - uses: dessant/repo-lockdown@v3
         with:
           exclude-pr-labels: 'dependencies'
